@@ -37,5 +37,10 @@ public class PlayerController : MonoBehaviour
         {
             scenecontroller.LoadGameOver();
         }
+
+        if (collision.gameObject.CompareTag("Victory"))
+        {
+            scenecontroller.LoadVictory();
+        }
     }
 }

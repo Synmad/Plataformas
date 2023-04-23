@@ -6,4 +6,9 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("GameOver");
     }
+
+    public void LoadVictory()
+    {
+        SceneManager.LoadScene("Victory");
+    }
 }
