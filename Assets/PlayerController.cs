@@ -3,7 +3,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float jumpForce;
-    bool isGrounded;
+    [SerializeField] bool isGrounded = true;
 
     Rigidbody2D rb;
     GameObject gamemanager;
@@ -22,16 +22,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            isGrounded = false;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
 
         if (collision.gameObject.CompareTag("Death"))
         {
