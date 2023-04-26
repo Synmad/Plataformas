@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Death
   - Victory
+  - WPA
+  - WPB
   layers:
   - Default
   - TransparentFX
